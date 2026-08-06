@@ -539,6 +539,7 @@ pre {
 }
 
 .tab-bar {
+    overflow-x: auto;
     display: flex;
     gap: 4px;
     margin-bottom: 21px;
@@ -564,7 +565,7 @@ pre {
 .tab-bar button:after {
     position: absolute;
     right: 10px;
-    bottom: -1px;
+    bottom: 0px;
     left: 10px;
     height: 2px;
     border-radius: 3px 3px 0 0;
@@ -1069,6 +1070,14 @@ pre {
     .workspace-layout {
         display: block;
         min-height: calc(100vh - 62px)
+    }
+    
+    .workspace-layout:has(.sidebar-open):after {
+        content: '';
+        backdrop-filter: blur(.75em);
+        inset: 0;
+        position: fixed;
+        z-index: 50;
     }
 
     .sidebar {
