@@ -909,10 +909,16 @@ pre {
     padding: 16px 0;
     background: color-mix(in srgb, var(--elevated) 65%, var(--surface));
     color: var(--soft);
-    font-size: .75rem;
+    font-family: "SFMono-Regular", Consolas, monospace !important;
+    font-size: .75rem !important;
     line-height: 1.65;
     scrollbar-width: thin;
     scrollbar-color: var(--border) transparent
+}
+
+.json-code * {
+    font-family: "SFMono-Regular", Consolas, monospace !important;
+    font-size: .75rem !important;
 }
 
 .json-line {
